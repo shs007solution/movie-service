@@ -25,6 +25,13 @@ steps:
     sonarQubeRunAnalysis: false
     spotBugsAnalysis: false
 
+
+- task: Docker@2
+  inputs:
+    containerRegistry: 'suchaitpersonal1'
+    command: 'buildAndPush'
+    Dockerfile: '**/Dockerfile'
+
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
