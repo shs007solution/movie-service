@@ -25,10 +25,10 @@ steps:
     sonarQubeRunAnalysis: false
     spotBugsAnalysis: false
 
-
 - task: Docker@2
   inputs:
     containerRegistry: 'suchaitpersonal1'
+    repository: 'personal-images'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
 
