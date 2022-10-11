@@ -13,7 +13,7 @@ resources:
   repositories:
     - repository: templates
       type: github
-      name: personal-devops
+      name: suchait24/personal-devops
       endpoint: suchait24
 
 steps:
