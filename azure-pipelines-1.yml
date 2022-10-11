@@ -9,6 +9,13 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
+resources:
+  repositories:
+    - repository: templates
+      type: github
+      name: personal-devops
+      endpoint: Github_SC
+
 steps:
 - script: echo Running Gradle build!
   displayName: 'Run gradle build'
