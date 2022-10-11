@@ -28,7 +28,7 @@ steps:
 - task: Docker@2
   inputs:
     containerRegistry: 'suchaitpersonal1'
-    repository: 'personal-images'
+    repository: 'personal-images/movie-service'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
     tags: 'movie-service-$(Build.BuildId)'
