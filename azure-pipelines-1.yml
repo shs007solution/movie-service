@@ -20,6 +20,13 @@ steps:
 - script: echo Running Gradle build!
   displayName: 'Run gradle build'
 
+- task: DownloadGitHubRelease@0
+  inputs:
+    connection: 'github_SC'
+    userRepository: 'suchait24/movie-service'
+    defaultVersionType: 'latest'
+    downloadPath: '$(System.ArtifactsDirectory)'
+
 - task: Gradle@3
   inputs:
     gradleWrapperFile: 'gradlew'
