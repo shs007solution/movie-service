@@ -9,6 +9,13 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
+resources:
+  repositories:
+    - repository: templates
+      type: github
+      name: suchait24/personal-devops
+      endpoint: github_SC
+
 steps:
 - script: echo Running Gradle build!
   displayName: 'Run gradle build'
@@ -24,13 +31,17 @@ steps:
     javaHomeOption: 'JDKVersion'
     sonarQubeRunAnalysis: false
     spotBugsAnalysis: false
-
-
+    
 - task: Docker@2
   inputs:
     containerRegistry: 'suchaitpersonal1'
+    repository: 'personal-images/movie-service'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
+    tags: 'movie-service-$(Build.BuildId)'
+
+- script:
+    echo $(System.DefaultWorkingDirectory)
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
