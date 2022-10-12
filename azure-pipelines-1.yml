@@ -20,6 +20,7 @@ steps:
 - script: echo Running Gradle build!
   displayName: 'Run gradle build'
 
+
 - task: Gradle@3
   inputs:
     gradleWrapperFile: 'gradlew'
