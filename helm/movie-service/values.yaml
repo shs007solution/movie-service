@@ -8,7 +8,7 @@ image:
   repository: personal-images/movie-service
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
-  tag: movie-service-${imageTag}
+  tag: movie-service-{{ .Values.imageTag }}
 
 imagePullSecrets: []
 nameOverride: ""
