@@ -5,10 +5,10 @@
 replicaCount: 1
 
 image:
-  repository: personal-images/movie-service
+  repository: suchaitpersonal1.azurecr.io/personal-images/movie-service
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
-  tag: movie-service-{{ .Values.imageTag }}
+  tag: 1
 
 imagePullSecrets: []
 nameOverride: ""
