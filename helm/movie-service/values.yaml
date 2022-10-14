@@ -47,7 +47,6 @@ ingress:
      kubernetes.io/ingress.class: azure/application-gateway
      kubernetes.io/tls-acme: "true"
   hosts:
-    - host: 52.226.219.6
       paths:
         - path: /movie-service
           pathType: Prefix
