@@ -49,7 +49,7 @@ ingress:
   hosts:
     - host: suchait-personal-ed2d18f7.hcp.eastus.azmk8s.io
       paths:
-        - path: /movie-service(/|$)(.*)
+        - path: /
           pathType: Prefix
   tls: []
   #  - secretName: chart-example-tls
