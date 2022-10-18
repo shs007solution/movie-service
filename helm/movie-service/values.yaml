@@ -46,6 +46,7 @@ ingress:
   annotations:
      kubernetes.io/ingress.class: nginx
      kubernetes.io/tls-acme: "false"
+     nginx.ingress.kubernetes.io/rewrite-target: /
   hosts:
     - host: suchait-personal-ed2d18f7.hcp.eastus.azmk8s.io
       paths:
