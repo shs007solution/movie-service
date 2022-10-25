@@ -44,11 +44,11 @@ ingress:
   enabled: true
   className: nginx
   annotations:
-    kubernetes.io/ingress.class: azure/application-gateway
+    kubernetes.io/ingress.class: nginx
     kubernetes.io/tls-acme: "false"
-    appgw.ingress.kubernetes.io/rewrite-rule-set: /
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
   hosts:
-    - host: suchait-ingress.eastus.cloudapp.azure.com
+    - host: http://20.127.178.211.nip.io
       paths:
         - path: /movie-service(/|$)(.*)
           pathType: Prefix
@@ -70,7 +70,7 @@ resources: {}
   #   memory: 128Mi
 
 autoscaling:
-  enabled: false
+  enabled: true
   minReplicas: 1
   maxReplicas: 2
   targetCPUUtilizationPercentage: 80
