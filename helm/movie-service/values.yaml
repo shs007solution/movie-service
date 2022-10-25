@@ -50,7 +50,7 @@ ingress:
     kubernetes.io/tls-acme: "false"
     nginx.ingress.kubernetes.io/rewrite-target: /$2
   hosts:
-    - host: suchait-personal.eastus.cloudapp.azure.com
+    - host: suchait-my-personal.eastus.cloudapp.azure.com
       paths:
         - path: /movie-service(/|$)(.*)
           pathType: Prefix
