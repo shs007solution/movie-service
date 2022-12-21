@@ -19,7 +19,7 @@ steps:
 - task: Gradle@3
   inputs:
     gradleWrapperFile: 'gradlew'
-    tasks: 'build'
+    tasks: 'clean build'
     publishJUnitResults: true
     testResultsFiles: '**/TEST-*.xml'
     #codeCoverageToolOption: 'JaCoCo'
@@ -35,6 +35,9 @@ steps:
     #summaryFileLocation: '$(System.DefaultWorkingDirectory)/metadata-service/build/reports/jacoco/test/html/index.html'
     #reportDirectory: '$(System.DefaultWorkingDirectory)/metadata-service/build/reports/jacoco/test/html/'
 
+
+- script:
+    ls -lrt /home/vsts/work/1/s/
 
 - task: Docker@2
   inputs:
