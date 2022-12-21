@@ -14,7 +14,7 @@ steps:
   displayName: 'Run gradle build'
 
 - script:
-    cat /home/vsts/work/1/s/build.gradle
+    ls -lrt /build/libs
 
 - task: Gradle@3
   inputs:
