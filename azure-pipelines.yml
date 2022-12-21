@@ -14,7 +14,7 @@ steps:
   displayName: 'Run gradle build'
 
 - script:
-    ls -lrt /build/libs
+    ls -lrt build/libs
 
 - task: Gradle@3
   inputs:
