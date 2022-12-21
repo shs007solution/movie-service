@@ -37,7 +37,7 @@ steps:
 
 
 - script:
-    ls -lrt /home/vsts/work/1/s/
+    ls -lrt /home/vsts/work/1/s/build/libs
 
 - task: Docker@2
   inputs:
