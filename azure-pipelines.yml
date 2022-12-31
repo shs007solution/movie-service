@@ -19,7 +19,7 @@ steps:
 - task: Gradle@3
   inputs:
     gradleWrapperFile: 'gradlew'
-    tasks: 'clean build'
+    tasks: 'bootJar'
     publishJUnitResults: true
     testResultsFiles: '**/TEST-*.xml'
     #codeCoverageToolOption: 'JaCoCo'
